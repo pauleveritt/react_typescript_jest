@@ -83,7 +83,7 @@ When that test is updated, that test will pass. We'll get to the failing
 ``App.test.tsx`` tests in a moment.
 
 It can be cumbersome to type ``props.`` in front of every prop. ES6 has some
-called object destructuring which lets you "unpack" an object and bring into
+called *object destructuring* which lets you "unpack" an object and bring into
 scope just the value you want. As a side benefit, it makes it clear at the
 entry point what that arrow function wants.
 
@@ -153,8 +153,3 @@ still working. Make sure to turn off ``start`` when done.
     state. But beware: putting them in a listing with thousands of items
     can be a performance killer, as each function is recreated on every
     render, which might be 60 times per second.
-
-See Also
-========
-
-- https://mikebridge.github.io/articles/getting-started-typescript-react-2/

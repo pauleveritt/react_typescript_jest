@@ -190,7 +190,3 @@ even from a test.
 As we have been doing, give this a try in the browser by firing up the
 ``start`` run configuration and clicking, then shift-clicking, in the browser.
 When done, terminate the ``start`` process.
-
-TODO
-
--

@@ -13,8 +13,6 @@ This step, though, will be just the minimum: no actual clicking to update
 state, for example. We will stick to introducing component state and
 modeling it in TypeScript.
 
-`Code repository for this step <https://github.com/pauleveritt/pycharm_companion/tree/master/docs/tutorials/react_typescript/class_state>`_
-
 Always Start With a Test
 ========================
 
@@ -161,6 +159,12 @@ Not only is the compiler happy, but our test is happy. We have a
 ``<Counter/>`` component which shows a value from local component state and
 which can optionally be passed in a starting value.
 
+.. note::
+
+    We could also have solved the definite assignment issue using a
+    ternary. TypeScript knows how to infer the type from such
+    "control flow."
+
 Wire Into UI
 ============
 
@@ -188,16 +192,3 @@ value of zero.
 If you'd like, restart the ``start`` run configuration and view this in the
 browser, so make sure everything still looks good. When done, terminate the
 ``start`` script.
-
-See Also
-========
-
-- https://www.stevefenton.co.uk/2018/01/typescript-definite-assignment-assertions/
-
-TODO
-
-- ``.toBe('0');`` put a JS comment saying "this fails" since people might
-  not read the next paragraph
-
-- Dennis said definite assignment wasn't needed as it wasn't broken, check
-  to see if example is wrong or TS has changed

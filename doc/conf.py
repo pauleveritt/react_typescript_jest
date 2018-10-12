@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'React+TS+Jest Tutorial'
+project = 'React+TS and TDD'
 copyright = '2018, paul.everitt@jetbrains.com'
 author = 'paul.everitt@jetbrains.com'
 

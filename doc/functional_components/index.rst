@@ -1,15 +1,16 @@
-.=========================================
+=========================================
 Functional React Components in TypeScript
 =========================================
 
-Functional programming has become quite popular, with React being one of
-the leaders in the web development space. :ref:`technology-cra` generates
+Functional programming has become quite popular. *create-react-app* generates
 a *class* component for our ``App``, because classes allow the full range of
 React capabilities (local state, lifecycle methods, etc.). But React
 encourages
 `stateless functional components (SFCs) <https://reactjs.org/docs/components-and-props.html>`_
-for simple, presentational components. Let's convert our ``App`` component
-to a TypeScript-driven SFC using TDD along the way.
+for simple, presentational components.
+
+Let's convert our ``App`` component to a TypeScript-driven SFC using TDD
+along the way.
 
 Prep
 ====
@@ -18,8 +19,8 @@ Since we're not using the browser until the end, stop the ``start`` process
 if it is still running. This is optional, but prevents your computer from
 doing compiling/transpiling/bundling work that's unneeded.
 
-Then, make sure you run your :ref:`technology-jest` run configuration if it
-wasn't already running.
+Then, make sure you run your Jest run configuration if it wasn't already
+running.
 
 Next, have ``App.tsx`` and ``App.test.tsx`` open side-by-side, as discussed
 in :doc:`../testing/index`.
@@ -186,8 +187,3 @@ Let's do so. Back in ``Heading.tsx``:
 
 All we did at this point was provide some type information for ``Heading``.
 We'll add much more to this later, starting with the next section.
-
-See Also
-========
-
-- http://airbnb.io/enzyme/docs/api/ReactWrapper/mount.html

@@ -238,18 +238,3 @@ Steps
     <div>Hash: {history.location.hash || 'None'}</div>
 
 #. The hash can be shown by adding ``#here`` to the URL.
-
-What Happened
-=============
-
-See Also
-========
-
-- https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/testing.md
-
-- https://medium.com/@antonybudianto/react-router-testing-with-jest-and-enzyme-17294fefd303
-
-TODO
-====
-
-- Write some tests

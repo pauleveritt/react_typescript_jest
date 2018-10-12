@@ -3,13 +3,12 @@ Presentation and Container Components
 =====================================
 
 React encourages a separation of concerns. UI components, aka presentation
-components, aka dumb components, are created by the bushel and managed by
+components, aka dumb components, are managed by
 container components, aka smart components. The container maintains state,
 logic, and passes things into the presentation component.
 
-Our Counter component is, as originally intended. Let's make it a
-presentation component by moving the state up to the container (App) and
-the incrementing logic as well.
+Let's make our Counter a presentation component by moving the state up to
+he container (App) and the incrementing logic as well.
 
 Counter State
 =============
@@ -133,7 +132,7 @@ shut up this test, because we aren't testing click handling:
     const handler = jest.fn();
     const wrapper = shallow(<Counter count={1} onCounterIncrease={handler}/>);
 
-We used :ref:`technology-jest` mock functions to create a disposable arrow
+We used *Jest* mock functions to create a disposable arrow
 function which we passed in as a prop.
 
 Do this for both tests:
@@ -365,15 +364,3 @@ and accurate notice?
 It's hard to make yourself get into TDD for React and TypeScript. Once you
 do, and once you get into the flow, it's a very positive development
 experience.
-
-See Also
-========
-
-- https://www.codementor.io/vijayst/unit-testing-react-components-jest-or-enzyme-du1087lh8
-
-TODO
-
-- Use the refactoring to convert the function
-
-- And make a reason to use extract component
-

@@ -10,12 +10,11 @@ In this tutorial step we start the process of test driven development. After
 this step, we'll develop first in our Jest tests. Then, only at the end, we
 will look at the app in the browser.
 
-
 Pretty Jest
 ===========
 
 Previously we ran our Jest tests as a generic npm run script, in the IDE's
-npm run tool window. However, PyCharm Professional has a dedicated run
+npm run tool window. However, WebStorm has a dedicated run
 configuration type for Jest. It's a fantastic way to do development. Let's
 switch to using that.
 
@@ -81,9 +80,6 @@ If you need more room, close the Project tool window.
     :width: 850px
     :alt: Component and test side-by-side
 
-We often want to jump between our code and our test. The IDE makes this
-easy. ``Cmd-Shift-T`` moves the cursor between code and test.
-
 A Real Test
 ===========
 
@@ -131,7 +127,7 @@ You can now test the TDD style of development. Try changing the component's
 ``<h1>`` to contain different text and save. You'll see the test fail. Change
 it back and save, and the tests pass.
 
-To see real TDD, you write the test first. Add a third test in
+To see real TDD, you write the test first. Add a *third test* in
 ``src/App.test.tsx``:
 
 .. code-block:: jsx
@@ -154,20 +150,3 @@ this markup:
 
 When you save, the test passes. Not only that...you extended your component
 without looking at a browser.
-
-See Also
-========
-
-- https://www.jetbrains.com/help/webstorm/running-unit-tests-on-jest.html
-
-- https://www.jetbrains.com/help/webstorm/run-debug-configuration-jest.html
-
-- https://blog.jetbrains.com/webstorm/tag/jest/
-
-- https://medium.com/kevin-salters-blog/testing-react-with-enzyme-fbfc30190e70
-
-- https://javascriptplayground.com/introduction-to-react-tests-enzyme/
-
-- https://www.codementor.io/vijayst/unit-testing-react-components-jest-or-enzyme-du1087lh8
-
-- https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter

@@ -4,7 +4,7 @@ Debugging JSX With Chrome
 
 As discussed in :doc:`../nodejs_debugging/index`, the testing and debugging
 under NodeJS is very productive. There are times, though, where you need a
-browser environment. Fortunately, PyCharm Professional can remote-control
+browser environment. Fortunately, the ID can remote-control
 the browser's execution, letting you stay inside the IDE.
 
 Let's see this in a simple case. We'll set a breakpoint in our ``label``
@@ -47,8 +47,11 @@ In this case, all the execution is happening in the browser's JavaScript
 engine. To verify, use ``Variables`` to look at the ``Global | chrome``
 object.
 
-To clean up, click the red button to stop the debugger, close Chrome, and
-clear the breakpoint.
-
-See Also
+Clean Up
 ========
+
+- Click the red button to stop the debugger
+
+- Close Chrome
+
+- Clear the breakpoint

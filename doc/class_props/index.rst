@@ -9,9 +9,11 @@ a class-based component instead.
 
 We're going to build a stateful counter component. Each click increments the
 click count, with the current count value stored in local component state.
-The ``<Counter/>`` component will be passed in some props. In this step,
-we'll show component props -- as done with a function in the previous
-step -- for class-based components. We'll do state in the next step.
+The ``<Counter/>`` component will be passed in some props.
+
+In this step, we'll show *class component* props -- as done with a function in
+the previous step -- for class-based components. We'll do state in the next
+step.
 
 First a Test
 ============
@@ -159,12 +161,3 @@ should now see ``Current 1`` in the UI.
 While this step didn't do too much that was new -- after all, we had optional
 props and interfaces in the previous step, with functions -- it paves the
 way for stateful components.
-
-See Also
-========
-
-TODO
-
-- Change ``{ label?: string }`` extraction to use refactoring
-
-- 

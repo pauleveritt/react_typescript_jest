@@ -14,24 +14,9 @@ with scripts such as
 which provides a TypeScript version of the generated
 project.
 
-In this tutorial step, we use the IDE to generate the project, then look at
-the results.
-
-Before Starting
-===============
-
-Before anything can happen, you have to install NodeJS on your system. Then,
-you have to install *create-react-app* either "globally" or somewhere
-that you can point the IDE to.
-
-PyCharm Professional integrates with :ref:`technology-cra` to generate the
-new project. The IDE lets you pass an argument to the generator for the
-extra script to use. We want to use ``react-scripts-ts``, a mature "fork"
-of :ref:`technology-cra` which changes the output to be React+TypeScript.
-
-If ``yarn`` is installed, :ref:`technology-cra` will choose it as the
-package manager and generate a yarn-oriented project. PyCharm Professional
-will respect that decision.
+In this tutorial step, we use *create-react-app* to generate a sample
+project with supported dependency versions, configuration, and a minimal
+starter application.
 
 Project Creation
 ================
@@ -48,15 +33,6 @@ use ``react-scripts-ts``:
 The ``react-scripts-ts`` project has
 `good documentation <https://github.com/wmonk/create-react-app-typescript#tldr>`_
 about this process. As a note, the first command will take a while.
-
-If you're in PyCharm Professional, there's UI integration for this. Create
-a new project, select ``React App`` as the project type, and make sure
-to expand ``More Settings``. There you can supply ``Scripts version:``
-as ``react-scripts-ts``:
-
-.. image:: screenshots/creating.png
-    :width: 800px
-    :alt: Creating a React+TypeScript project
 
 You now have a working React+TypeScript project, toolchain, and hello-world
 style app. It's actually quite an achievement. Assembling all of this, and
@@ -76,17 +52,12 @@ HTTP, and helpfully opens your browser:
 
     $ npm run-script start
 
-.. note::
-
-    The ``start`` script issues some warnings about ``baseUrl`` when it
-    starts up. We'll handle this in later steps.
-
 This dev server is watching for changes. If you edit a file, it will
 regenerate the universe and tell the page to reload. Open ``src/App.tsx``
 and change ``Welcome to React`` to ``Welcome to React TypeScript``, then
 save. Your terminal shows a recompile and your browser updates.
 
-PyCharm Professional puts a nice UI on this. Click on the ``npm`` tool icon
+JetBrains IDEs put a nice UI on this. Click on the ``npm`` tool icon
 (usually on the left) and double click ``start`` in the listing of run
 scripts. You'll get a run window at the bottom with a nice UI for showing
 output and restarting. Alternatively, open ``package.json`` and click the
@@ -102,7 +73,7 @@ Production Build
 
 That's great for development, but for production, we need files on disk,
 shrunk as small as possible. There's a lot of complexity behind this, but
-:ref:`technology-cra` has hidden it behind an npm script:
+*create-react-app* has hidden it behind an npm script:
 
 .. code-block:: bash
 
@@ -112,7 +83,7 @@ This generates output into a ``build`` directory. The output is
 self-contained, including even an ``index.html`` file. You can copy it to a
 static hosting site as-is.
 
-Running this is easy in PyCharm Professional: just click on ``build`` in the
+Running this is easy in the IDE: just click on ``build`` in the
 npm tool window. As an optimization, right-click on the new ``build``
 directory and ``Mark Directory As | Excluded``. This prevents the IDE from
 indexing the contents of that directory, which you don't need during
@@ -126,7 +97,7 @@ development:
 This Is Only a Test
 ===================
 
-Projects generated from :ref:`technology-cra` are also wired for testing:
+Projects generated from *create-react-app* are also wired for testing:
 dependencies, configuration files, and sample tests. We'll see more later,
 but for now, let's run the tests. Unsurprisingly, it's similar to the above:
 
@@ -134,23 +105,9 @@ but for now, let's run the tests. Unsurprisingly, it's similar to the above:
 
     $ npm run-script test
 
-This uses the :ref:`technology-jest` test runner. At the time of this writing,
-there's an issue with test running when the project isn't under version
-control. Let's fix that by changing the npm script. Edit ``package.json``
-and change the ``test`` script to:
-
-.. code-block:: bash
-
-    "test": "react-scripts-ts test --env=jsdom --watchAll",
-
-Double-click the ``test`` entry in the ``npm`` tool window to try again:
-
-.. code-block:: bash
-
-    $ npm run-script test
-
-The tests auto-run as you edit, updating much faster once first loaded. To
-see this in action, open ``src/App.test.tsx`` and add a line to the test:
+This uses the *Jest* test runner. The tests auto-run as you edit, updating
+much faster once first loaded. To see this in action, open
+``src/App.test.tsx`` and add a line to the test:
 
 .. code-block:: typescript
     :emphasize-lines: 5
@@ -166,12 +123,15 @@ When you save this, the test runner output tells you about the test failure.
 Change the ``2`` to a ``1`` and save, and the tests pass.
 
 As with the other run scripts, you can double-click to run the npm scripts
-in an IDE tool window in PyCharm Professional. But that's the less-interesting
-way to do it. We'll show in :doc:`../testing/index` the more-PyCharmic way.
+in an IDE tool window.
 
 .. image:: screenshots/testing.png
     :width: 800px
     :alt: Running the npm test script while editing a test
+
+
+But that's the less-interesting way to do it. We'll
+show in :doc:`../testing/index` a more visual way.
 
 Conclusion
 ==========
@@ -181,19 +141,5 @@ React+TypeScript project, with all the tooling configured. We also gave a
 brief tour of driving this in the IDE.
 
 In our next step we'll clean up some of the generated app, fix some of the
-tooling, and take a look a little more at how TypeScript with a smart IDE
-helps your productivity.
-
-TODO
-
-- Switch to npx instead of installing cra
-
-- Excluding build folder...WS might do that by default later
-
-- ``isn’t under version control``...might be fixed in react-scripts-ts if
-  not link to the ticket
-
-- Confirm that --env=jsdom is still needed
-
-- Perhaps switch from --watchAll to something newer
-
+tooling, and take a look a little more at how TypeScript helps your
+productivity.

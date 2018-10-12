@@ -1,6 +1,6 @@
-===========================
-React+TypeScript QuickStart
-===========================
+====================
+React+TypeScript+TDD
+====================
 
 React is wildly popular and thus wildly supported. TypeScript is
 increasingly popular, and thus increasingly supported.

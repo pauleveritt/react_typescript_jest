@@ -104,9 +104,6 @@ argument doesn't have a supplied type. Let's fix that:
         return `Hello ${name.toUpperCase()}`;
     }
 
-No surprise: the IDE has an ``Alt-Enter`` quick fix for this -- in this
-case, ``Infer parameter types from usage``.
-
 Stop at Breakpoint
 ==================
 
@@ -147,12 +144,3 @@ Let's clean up:
 - Change the test's label argument from ``42`` back to ``React``
 
 - Re-open the Run Tool window
-
-See Also
-========
-
-TODO
-
-- No longer needed to put in the setupTest.ts thingy, WS will generate
-  that when doing CRA
-
