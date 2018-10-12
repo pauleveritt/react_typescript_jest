@@ -29,7 +29,7 @@ As soon as we do that, the universe starts breaking. TypeScript yells at us
 in every one of our tests, as our ``<Counter/>`` component is not passing in
 a required prop.
 
-Too bad, TypeScript, you'll have to wait. Next, let's change our ``Counter``
+Next, let's change our ``Counter``
 component to not have local state. We mentioned in
 :doc:`../functional_components/index` that stateless presentation components
 are best done with stateless functional components. Let's change
@@ -70,7 +70,7 @@ Let's fix the first two tests, to see if we are in the ballpark:
             .toBe('Current');
     });
 
-These two tests now pass.
+These two tests no longer have TypeScript complaints.
 
 Since the ``<Counter/>`` component no longer controls the starting value,
 you can remove the
@@ -93,6 +93,7 @@ Here goes. First, since this click handler function will come in as a prop,
 we need to change ``ICounterProps`` to model it:
 
 .. code-block:: typescript
+    :emphasize-lines: 4
 
     interface ICounterProps {
         label?: string
@@ -130,7 +131,7 @@ shut up this test, because we aren't testing click handling:
 .. code-block:: typescript
 
     const handler = jest.fn();
-    const wrapper = shallow(<Counter count={1} onCounterIncrease={handler}/>);
+    const wrapper = shallow(<Counter count={0} onCounterIncrease={handler}/>);
 
 We used *Jest* mock functions to create a disposable arrow
 function which we passed in as a prop.
@@ -219,6 +220,7 @@ Our third test can now change, to see if our "spy" was called with a boolean
 instead of an event object:
 
 .. code-block:: typescript
+    :emphasize-lines: 5
 
     it('should call the handler on click', () => {
         const handler = jest.fn();
@@ -226,9 +228,6 @@ instead of an event object:
         wrapper.find('.counter').simulate('click', {shiftKey: false});
         expect(handler).toBeCalledWith(false);
     });
-
-The fourth test, for shift, can be deleted. It's simply a variation of this
-test.
 
 Updating the Container
 ======================

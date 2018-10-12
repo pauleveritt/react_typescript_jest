@@ -22,7 +22,8 @@ generated this for us. Open it up and let's take a look:
       "linterOptions": {
         "exclude": [
           "config/**/*.js",
-          "node_modules/**/*.ts"
+          "node_modules/**/*.ts",
+          "coverage/lcov-report/*.js"
         ]
       }
     }

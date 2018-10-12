@@ -102,8 +102,8 @@ We need to tell Jest to use a configured Enzyme. Add this file at
 
 .. code-block:: typescript
 
-    import * as Enzyme from 'enzyme'
-    import * as Adapter from 'enzyme-adapter-react-16'
+    import * as Enzyme from 'enzyme';
+    import * as Adapter from 'enzyme-adapter-react-16';
 
     Enzyme.configure({
         adapter: new Adapter(),

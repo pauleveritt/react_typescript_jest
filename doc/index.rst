@@ -33,4 +33,3 @@ The finished code for this tutorial step is
     class_state/index
     rich_events_and_testing/index
     presentation_components/index
-    routing/index

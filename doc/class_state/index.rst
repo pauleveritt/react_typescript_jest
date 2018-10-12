@@ -30,7 +30,7 @@ which fails, because we have a static ``<span>1</span>``:
     it('should default start at zero', () => {
         const wrapper = shallow(<Counter label={'Current'}/>);
         expect(wrapper.find('.counter span').text())
-            .toBe('0');
+            .toBe('1');
     });
 
 Over in ``Counter.tsx``, let's write our interface first. What does the
@@ -95,7 +95,7 @@ in an optional prop for the starting value. First, the test in
     it('should custom start at another value', () => {
         const wrapper = shallow(<Counter label={'Current'} start={10}/>);
         expect(wrapper.find('.counter span').text())
-            .toBe('0');
+            .toBe('10');
     });
 
 As before, our test fails, but before that, our IDE warns us that we have
@@ -174,7 +174,7 @@ First up, we open ``App.test.tsx`` and add a single line to test the
 initial counter value:
 
 .. code-block:: typescript
-    :emphasize-lines: 5
+    :emphasize-lines: 7-8
 
     it('renders the app and the heading', () => {
         const wrapper = mount(<App/>);
@@ -183,7 +183,7 @@ initial counter value:
         expect(wrapper.find('.counter label').text())
             .toBe('Current');
         expect(wrapper.find('.counter span').text())
-            .toBe('10');
+            .toBe('0');
     });
 
 What changes in ``App.tsx``? In this case, nothing. We want to use the default
